@@ -1,28 +1,45 @@
-#main   {
-    background-color:#e4d7d7af	;
+#main {
+  padding-top: 40px;
 }
 
-#cards  {
-   
-    padding-top: 50px;
+.cards .card {
+  box-shadow: 5px;
+  border: none;
+  margin-bottom: 50px;
+  width: 300px;
+}
+
+.card .image-wrapper {
+  height: 200px;
+}
+
+.card .image-wrapper .flag {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card a {
+  text-decoration: none;
+}
+#main .cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.desc li {
+  border: none;
+}
+
+.card:hover {
+  scale: 110%;
+  transition: 1s ease;
 }
 
 
-#cards .card {
-    box-shadow: 5px;
-    border: none;
-    padding: 0px 0px 0px 0px;
-    height: 450px;
-    width: 300px;
+
+#light-mode {
+background-color: white;
+
 }
-
-#cards .card-wrapper {
-    gap: 15px;
-}
-
-
-.card .flags {
-    width: 100%;
-    height: 100%;
-}
-
