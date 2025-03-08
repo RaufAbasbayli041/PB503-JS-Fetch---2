@@ -1,0 +1,33 @@
+#body {
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+  }
+  
+#body .main-details {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+.ul-1 {
+    justify-items: flex-start;
+}
+
+.ul-1 li {
+    list-style-type: none;
+    
+}
+
+.ul-2 li {
+    list-style-type: none;
+}
+
+
+/* #body .main-details .ul-1 ul{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    list-style-type: none;
+} */
+

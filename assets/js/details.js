@@ -40,17 +40,3 @@ function printCards(countries) {
     cards.appendChild(cardWrapper);
   });
 }
-
-
-// let logo = document.querySelector("#logo")
-// let toggleModeBtn = document.querySelector("#toggleMode")
-// let ulList = document.querySelector(".ulList")
-
-// toggleModeBtn.addEventListener("click", function(){
-// document.body.classList.add("dark-mode")
-
-
-
-
-
-// })

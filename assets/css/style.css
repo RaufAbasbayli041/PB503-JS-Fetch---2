@@ -1,4 +1,4 @@
-#main {
+.container-fluid {
   padding-top: 40px;
 }
 
@@ -39,7 +39,13 @@
 
 
 
-#light-mode {
+/* .light-mode {
 background-color: white;
-
+color: black !important;
 }
+
+.dark-mode {
+  background-color: #1f1f1f;
+  color: white !important; 
+}
+ */

@@ -9,18 +9,49 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./assets/css/style.css " />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./assets/css/detail.css " />
     <title>Document</title>
 </head>
 <body>
-    <nav class="navbar bg-body-tertiary">
-        <div class="container">
-          <h3>Where in the world?</h3>
-          <form class="d-flex" role="search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
+  <nav class="navbar bg-body-tertiary" >
+    <div class="container " >
+      <h3 id="logo ">Where in the world?</h3>
+      <form class="d-flex" role="search">
+        <button class="btn btn-outline-success" type="submit" id="toggleMode">Dark mode</button>
+      </form>
+    </div>
+  </nav>
+
+  <div id="body">
+      <div class="data-image">
+        <img src="" alt="">
+      </div>
+      <div class="data-details">
+        <h1>salam</h1>
+        <div class="main-details">
+            <div class="ul-1" >
+            <ul>
+              <li class="detail-items ">Native Name:</li>
+              <li class="detail-items">Population:</li>
+              <li class="detail-items">Region:</li>
+              <li class="detail-items">Sub Region:</li>
+              <li class="detail-items">Capital:</li>
+            </ul>
+            </div>
+          <div class="ul-2" style="padding-left: 500px;">
+            <li class="detail-items">Top Level Domain:</li>
+            <li class="detail-items">Currencies:</li>
+            <li class="detail-items">Languages:</li>
+          </div>
         </div>
-      </nav>
+        <p>Border Countries:</p>
+      </div>
+  </div>
 
 </body>
 </html>
