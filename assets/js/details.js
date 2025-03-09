@@ -1,42 +1,76 @@
-const BASE_URL = "https://restcountries.com/v3.1/all";
+const BASE_URL = "https://restcountries.com/v3.1";
+const params = new URLSearchParams(window.location.search);
 
-function getAllDatas() {
-  fetch(BASE_URL)
+const country = params.get("country");
+
+console.log(country);
+
+function getAllDatas(name) {
+  fetch(`${BASE_URL}/name/${name}?fullText=true`)
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
-      printCards(data);
+      console.log(data[0]);
+      getDataDetails(data);
     });
 }
 
-getAllDatas();
+getAllDatas(country);
 
-function printCards(countries) {
-  const cards = document.querySelector(".cards");
-  countries.sort((a, b) => a.name.common.localeCompare(b.name.common));
+function getDataDetails(countries) {
+  const detailWeb = document.querySelector("#detail-web");
   countries.forEach((country) => {
-    const cardWrapper = document.createElement("div");
-    cardWrapper.className =
-      " col-12 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center divcl";
-    cardWrapper.innerHTML = ` 
-          <div class="card ">
-          <a href="" >
-                  <div class="image-wrapper">
-                  <img src="${country.flags.svg}" class="card-img-top flag" alt="..." />
-                    </div>
-                    <div class="card-body ">
-                    <h5 class="card-title ">${country.name.common}</h5>
-                    </div>
-                    <ul class="list-group list-group-flush desc ulList" >
-                    <li class="list-group-item ">Population: ${country.population}</li>
-                    <li class="list-group-item">Region: ${country.region}</li>
-                    <li class="list-group-item">Capital: ${country.capital}</li>
-                    </ul>
-                    </div>
-                    </div> 
-                    </a>
-                    </div>`;
+    const dataContent = document.createElement("div");
+    dataContent.className = "data-content";
+    dataContent.innerHTML = `
+    
+         
+          <img src="${country.flags.svg}" class="card-img-left " alt="..." />
+          
+          <div class="context">
+            <h2>${country.name.common}</h2>
+            <div class="data-details">
+              <div class="left">
+                <ul style="width: 100%;">
+                  <li class="detail-items"><b>Native Name</b>: ${
+                    country.name.nativeName
+                      ? Object.values(country.name.nativeName)[0].common
+                      : ""
+                  }</li>
+                  <li class="detail-items"><b>Population:</b> ${
+                    country.population.toLocaleString()
+                  }</li>
+                  <li class="detail-items"><b>Region:</b> ${country.region}</li>
+                  <li class="detail-items"><b>Sub Region:</b> ${
+                    country.subregion
+                  }</li>
+                  <li class="detail-items"><b>Capital:</b> ${
+                    country.capital
+                  }</li>
+                </ul>
+              </div>
+              <div class="right">
+                <ul>
+                  <li class="detail-items"> <b>Top Level Domain:</b> ${
+                    country.tld
+                  }</li>
+                  <li class="detail-items"> <b>Currencies:</b> ${
+                    country.currencies
+                      ? Object.values(country.currencies)[0].name
+                      : "N/A"
+                  }</li>
+                  <li class="detail-items"> <b>Languages:</b>  ${
+                    country.languages
+                      ? Object.values(country.languages).join(", ")
+                      : "N/A"
+                  }</li>
+                </ul>
+              </div>
+            </div>
+            <p><b>Border Countries:</b> </p> <div >${country.borders}</div>
+          </div>
+        
+    `;
 
-    cards.appendChild(cardWrapper);
+    detailWeb.appendChild(dataContent);
   });
 }

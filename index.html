@@ -18,19 +18,56 @@
     <title>PB503 Feltch-2</title>
   </head>
 
-  <body >
-    <nav class="navbar bg-body-tertiary" >
-      <div class="container " >
-        <h3 id="logo ">Where in the world?</h3>
-        <form class="d-flex" role="search">
-          <button class="btn btn-outline-success" type="submit" id="toggleMode">Dark mode</button>
+  <body>
+    
+      <div style="background-color: white; width: 100%; display: flex; justify-items: center; flex-direction: row;" >
+      <div class="container header" style="padding: 20px 0px; " >
+        <h4 id="logo "style="width: 400px;"><a href="" >Where in the world?</a></h4>
+        <form class="d-flex" >
+          <button class="btn btn-outline-success" type="submit" id="toggleMode">
+            Dark mode
+          </button>
         </form>
       </div>
-    </nav>
+    </div>
+    
+    <div style="background-color: #fafafa;">
+      <section
+        class="container-fluid" 
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding-top: 30px;
+          padding-left: 43px;
+          padding-right: 43px;
+          
+        "
+      >
+        <div class="search">
+          <input id="search-input"
+            type="text"
+            placeholder="Search for a country..."
+            style="width: 300px"
+          />
+        </div>
+        <select
+          name=""
+          class="form-select filter"
+          aria-label="Default select example"
+          style="height: 40px; width: 180px"
+        >
+          <option value="0">Filter by Region</option>
+          <option value="1">All</option>
+          <option value="2">Africa</option>
+          <option value="3">Americas</option>
+          <option value="4">Asia</option>
+          <option value="5">Europe</option>
+          <option value="3">Oceania</option>
+        </select>
+      </section>
 
-    <div >
-      
-      <div >
+      <div class="">
         <div class="container-fluid">
           <div class="row cards"></div>
         </div>

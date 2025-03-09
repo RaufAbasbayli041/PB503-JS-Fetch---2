@@ -21,6 +21,7 @@
 
 .card a {
   text-decoration: none;
+  color: black;
 }
 #main .cards {
   display: flex;
@@ -37,8 +38,22 @@
   transition: 1s ease;
 }
 
+.container a{
+  text-decoration: none;
+  color: black;
+}
+
+input {
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+border: none;
+}
 
 
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 /* .light-mode {
 background-color: white;
 color: black !important;
@@ -49,3 +64,6 @@ color: black !important;
   color: white !important; 
 }
  */
+
+
+ 
